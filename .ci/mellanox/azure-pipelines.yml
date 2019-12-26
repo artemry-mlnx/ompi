@@ -13,6 +13,7 @@
 # 2. Verify '/azp run' in PR comments by non-Azure users
 # 3. Verify non-master PRs
 # 4. Verify master per-commit CI
+# 5. Verify PR CI run without AzureCI user
 
 # Per-commit
 trigger:
