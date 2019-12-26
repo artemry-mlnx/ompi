@@ -1,19 +1,18 @@
 # TODO:
 # 1. Run several executors on the agent - workspace might need to be adapted
-# 2. Cleanup docker artefacts
-# 3. Use docker registry (e.g. Mellanox Harbor)
-# 4. Change CentOS to RHEL
-# 5. Align versions of OS/MLNX_OFED with HPC-X ones
-# 6. Need to reduce CI time (faster CPU, SSD, etc.)
-# 7. Adapt taskset usage in scripts for AzureCI (if applicable - if several executors are allowed on an agent)
-# 8. Use agent hosts with NUMA enabled
+# 2. Use docker registry (e.g. Mellanox Harbor)
+# 3. Change CentOS to RHEL
+# 4. Align versions of OS/MLNX_OFED with HPC-X ones
+# 5. Need to reduce CI time (faster CPU, SSD, etc.)
+# 6. Adapt taskset usage in scripts for AzureCI (if applicable - if several executors are allowed on an agent)
+# 7. Use agent hosts with NUMA enabled
+# 8. Fix code inspection warnings (non-critical) in the shell scripts
 
 # Verification scenarios:
-# 1. Trigger CI several times simultaneously (e.g. from different PRs)
-# 2. Verify '/azp run' in PR comments by non-Azure users
-# 3. Verify non-master PRs
-# 4. Verify master per-commit CI
-# 5. Verify PR CI run without AzureCI user
+# 1. Verify '/azp run' in PR comments by non-Azure users
+# 2. Verify non-master PRs
+# 3. Verify master per-commit CI
+# 4. Verify that PR ompi sources are correctly used within CI (check git source tree)
 
 # Per-commit
 trigger:
