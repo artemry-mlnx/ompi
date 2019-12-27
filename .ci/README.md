@@ -1,5 +1,6 @@
 # OpenMPI Continuous Integration (CI) Services
 ## Mellanox OpenMPI CI
+[![Build Status](https://dev.azure.com/mlnx-swx/mellanox-ompi-ci-project/_apis/build/status/mellanox-ompi-ci-pipeline?branchName=master)](https://dev.azure.com/mlnx-swx/mellanox-ompi-ci-project/_build/latest?definitionId=6&branchName=master)
 ### Scope
 [Mellanox](https://www.mellanox.com/) OpenMPI CI is intended to verify OpenMPI with recent Mellanox SW components ([Mellanox OFED](https://www.mellanox.com/page/products_dyn?product_family=26), [UCX](https://www.mellanox.com/page/products_dyn?product_family=281&mtag=ucx) and other [HPC-X](https://www.mellanox.com/page/products_dyn?product_family=189&mtag=hpc-x) components) in the Mellanox lab environment.
 
