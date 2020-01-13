@@ -27,7 +27,7 @@ jobs:
   container:
     image: rdmz-harbor.rdmz.labs.mlnx/hpcx/ompi_ci:latest
     options: -v /hpc/local:/hpc/local -v /opt:/opt --uts=host --ipc=host --ulimit stack=67108864
-      --ulimit memlock=-1 --security-opt seccomp=unconfined --cap-add=SYS_ADMIN --device=/dev/infiniband/ --user swx-jenkins
+      --ulimit memlock=-1 --security-opt seccomp=unconfined --cap-add=SYS_ADMIN --device=/dev/infiniband/
   steps:
   - task: DeleteFiles@1
     displayName: Cleanup workspace folder
