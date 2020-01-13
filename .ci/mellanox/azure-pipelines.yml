@@ -44,6 +44,13 @@ jobs:
       git clone $(ompi_jenkins_scripts_git_repo_url)
       cd jenkins_scripts && git checkout $(ompi_jenkins_scripts_git_branch) && cd - > /dev/null
       export WORKSPACE=$(Build.SourcesDirectory)/ompi
+      cat /proc/1/cgroup
+      printenv
+      pwd
+      ls -al
+      ls -ald $(Build.SourcesDirectory)
+      ls -ald $(Build.SourcesDirectory)/ompi
+      ls -ald $(Build.SourcesDirectory)/jenkins_scripts
       # TODO: rework ompi_test.sh to avoid Jenkins mentions
       export JENKINS_RUN_TESTS=yes
       $(Build.SourcesDirectory)/jenkins_scripts/jenkins/ompi/ompi_test.sh
