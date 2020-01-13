@@ -12,10 +12,6 @@ pool:
   demands: CUSTOM_CAPABILITY -equals ompi
 
 variables:
-  ompi_ci_docker_registry_url: rdmz-harbor.rdmz.labs.mlnx
-  ompi_ci_docker_registry_repo: hpcx
-  ompi_ci_docker_image_name: ompi_ci
-  ompi_ci_docker_image_tag: latest
   # TODO: change to the main repo and master branch
   #ompi_jenkins_scripts_git_repo_url: https://github.com/mellanox-hpc/jenkins_scripts.git
   ompi_jenkins_scripts_git_repo_url: https://github.com/itemko/jenkins_scripts.git
@@ -29,7 +25,7 @@ jobs:
   displayName: Mellanox OpenMPI CI
   timeoutInMinutes: 240
   container:
-    image: $(ompi_ci_docker_registry_url)/$(ompi_ci_docker_registry_repo)/$(ompi_ci_docker_image_name):$(ompi_ci_docker_image_tag)
+    image: rdmz-harbor.rdmz.labs.mlnx/hpcx/ompi_ci:latest
     options: -v /hpc/local:/hpc/local -v /opt:/opt --network=host --uts=host --ipc=host --ulimit stack=67108864
       --ulimit memlock=-1 --security-opt seccomp=unconfined --cap-add=SYS_ADMIN --device=/dev/infiniband/ --user swx-jenkins
   steps:
