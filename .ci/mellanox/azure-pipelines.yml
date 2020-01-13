@@ -26,7 +26,7 @@ jobs:
   timeoutInMinutes: 240
   container:
     image: rdmz-harbor.rdmz.labs.mlnx/hpcx/ompi_ci:latest
-    options: -v /hpc/local:/hpc/local -v /opt:/opt --network=host --uts=host --ipc=host --ulimit stack=67108864
+    options: -v /hpc/local:/hpc/local -v /opt:/opt --uts=host --ipc=host --ulimit stack=67108864
       --ulimit memlock=-1 --security-opt seccomp=unconfined --cap-add=SYS_ADMIN --device=/dev/infiniband/ --user swx-jenkins
   steps:
   - task: DeleteFiles@1
